@@ -1,0 +1,297 @@
+/* --- IMPORTAÇÃO DE FONTE SERIFADA ELEGANTE --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+
+/* --- RESET E VARIÁVEIS DE CORES --- */
+:root {
+    --bg-green: #3B5838;         /* Verde principal da imagem */
+    --accent-cream: #E7E0AF;     /* Amarelo creme/pastel dos detalhes e texto "Example" */
+    --card-bg: #F7F4E9;          /* Fundo claro para o artigo principal */
+    --text-dark: #233121;        /* Texto de leitura */
+    --border-light: #52734D;     /* Bordas sutis em tom verde médio */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-green);
+    color: var(--accent-cream);
+    line-height: 1.6;
+}
+
+/* --- CABEÇALHO / HEADER --- */
+.wiki-header {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid var(--accent-cream);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--accent-cream);
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+    margin-right: 8px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 8px 14px;
+    border: 1px solid var(--accent-cream);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent-cream);
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.search-bar input::placeholder {
+    color: rgba(231, 224, 175, 0.7);
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    background-color: var(--accent-cream);
+    color: var(--bg-green);
+    font-weight: 600;
+    border: 1px solid var(--accent-cream);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.search-bar button:hover {
+    background-color: #f2ebd1;
+}
+
+/* --- LAYOUT PRINCIPAL --- */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* --- BARRA LATERAL (ÍNDICE ESTILO QUADRO) --- */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--accent-cream);
+    padding: 20px;
+    border-radius: 6px;
+    align-self: flex-start;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.sidebar h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--accent-cream);
+    border-bottom: 1px solid var(--accent-cream);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul ul {
+    padding-left: 15px;
+}
+
+.sidebar a {
+    color: var(--accent-cream);
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    padding: 4px 0;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.sidebar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* --- CONTEÚDO DO ARTIGO (CARTÃO CLARO) --- */
+.content {
+    flex-grow: 1;
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+    padding: 35px;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--accent-cream);
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-style: italic;
+    color: var(--bg-green);
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #556b52;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-light);
+    margin-bottom: 25px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    color: var(--bg-green);
+    border-bottom: 2px solid var(--bg-green);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--bg-green);
+    margin: 20px 0 10px 0;
+}
+
+p {
+    margin-bottom: 14px;
+    font-size: 1rem;
+}
+
+ul, ol {
+    margin-left: 25px;
+    margin-bottom: 18px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+dt {
+    font-weight: 600;
+    color: var(--bg-green);
+    margin-top: 12px;
+}
+
+dd {
+    margin-left: 15px;
+    margin-bottom: 12px;
+}
+
+/* --- INFOBOX COM MOLDURA ESTILO DA IMAGEM --- */
+.infobox {
+    float: right;
+    width: 260px;
+    background-color: var(--accent-cream);
+    color: var(--bg-green);
+    border: 2px solid var(--bg-green);
+    padding: 12px;
+    margin: 0 0 20px 20px;
+    box-shadow: 5px 5px 0px var(--bg-green);
+    border-radius: 4px;
+}
+
+.infobox h3 {
+    text-align: center;
+    background-color: var(--bg-green);
+    color: var(--accent-cream);
+    margin: -12px -12px 12px -12px;
+    padding: 8px;
+    font-size: 1.1rem;
+}
+
+.infobox-image {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.infobox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infobox th, .infobox td {
+    text-align: left;
+    padding: 6px 4px;
+    border-bottom: 1px dashed rgba(59, 88, 56, 0.3);
+}
+
+.infobox th {
+    font-weight: 600;
+}
+
+/* --- CAIXAS DE ALERTA --- */
+.alert-box {
+    background-color: #e3ebd9;
+    border-left: 5px solid var(--bg-green);
+    color: var(--bg-green);
+    padding: 15px;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.95rem;
+}
+
+/* --- RODAPÉ --- */
+.wiki-footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    color: var(--accent-cream);
+    border-top: 1px solid rgba(231, 224, 175, 0.3);
+    margin-top: 40px;
+}
+
+/* --- RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .infobox {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+    }
+}
